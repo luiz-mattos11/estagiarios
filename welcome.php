@@ -13,12 +13,13 @@ include "usuario.php"
     <body>
 		<?php $usuario=new usuario();
 			$usuario->setNome($_GET["nome"]);
+			$usuario->setEmail($_GET["email"]);
 		?>
         <div class="container">
             <div class="content">
                 <div class="info"><br />
                     Bem Vindo <?php echo($usuario->getNome()) ?><br>
-					Seu e-mail:
+					Seu e-mail: <?php echo($usuario->getEmail()) ?><br>
                 </div>
             </div>
         </div>
