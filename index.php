@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+
+<style>
+	.container{
+		margin-top: 20%;
+		text-align: center;
+	}
+
+</style>
+
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <head>
@@ -23,15 +32,18 @@
         </div>
     </body>
 </html>
+
+
+
 <script>
 function validate(){
 	var nome=$('#nome').val();
 	var email=$('#email').val();
-	//if(){
-		//alert("Campos nome e e-mail obrigatorios");
-		//return false;
-	//}else{
-		//return true;
-	//}
+	if(email == "" || nome == "" ){
+		alert("Campos nome e e-mail obrigatorios");
+		return false;
+	}else{
+		return true;
+	}
 }
 </script>
